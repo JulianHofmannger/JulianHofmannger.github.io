@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Julian Hofmann | M&A Beratung</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #111;
+      line-height: 1.6;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    header img {
+      width: 80px;
+    }
+    .header-title {
+      text-align: left;
+    }
+    .header-title h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+    .header-title p {
+      font-size: 1rem;
+      color: #555;
+      margin-top: 4px;
+    }
+    .top-nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      border-bottom: 1px solid #ddd;
+    }
+    .top-nav li {
+      list-style: none;
+      position: relative;
+    }
+    .top-nav a {
+      display: block;
+      padding: 16px 10px;
+      text-decoration: none;
+      color: #111;
+      font-weight: 500;
+    }
+    .top-nav li:hover > ul {
+      display: block;
+    }
+    .top-nav ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      min-width: 200px;
+      z-index: 10;
+    }
+    .top-nav ul li {
+      width: 100%;
+    }
+    .top-nav ul a {
+      padding: 12px 16px;
+      white-space: nowrap;
+    }
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    h2 {
+      margin-top: 40px;
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+    }
+    ul {
+      margin-left: 20px;
+      list-style: disc;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+      background: #f5f5f5;
+      padding: 20px;
+      margin-top: 60px;
+      border-top: 1px solid #ddd;
+    }
+    .footer-links {
+      margin-top: 10px;
+    }
+    .footer-links a {
+      color: #888;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+    a.email {
+      color: #0056b3;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-title">
+      <h1>Julian Hofmann</h1>
+      <p>Mergers & Acquisitions • Unternehmensbewertung • Deal-Making</p>
+    </div>
+    <img src="logo.png" alt="Julian Hofmann Logo" />
+  </header>
+
+  <nav>
+    <ul class="top-nav">
+      <li><a href="index.html">Start</a></li>
+      <li>
+        <a href="leistungen.html">Leistungen</a>
+        <ul>
+          <li><a href="#ma">Mergers & Acquisitions</a></li>
+          <li><a href="#kapital">Kapitalbeschaffung</a></li>
+          <li><a href="#strategie">Wachstumsstrategie</a></li>
+          <li><a href="#bewertung">Unternehmensbewertung</a></li>
+        </ul>
+      </li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <section>
+      <h2>Über mich</h2>
+      <p>Ich bin Julian Hofmann, spezialisiert auf M&A-Strategien, Due Diligence und skalierbare Firmenübernahmen.<br />
+      Mein Ziel: Wachstum durch Präzision.</p>
+    </section>
+
+    <section>
+      <h2>Leistungen</h2>
+      <ul>
+        <li id="ma">Mergers & Acquisitions</li>
+        <li id="kapital">Kapitalbeschaffung</li>
+        <li id="strategie">Wachstumsstrategie & Skalierung</li>
+        <li id="bewertung">Unternehmensbewertung & Analyse</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Kontakt</h2>
+      <p>Erreichbar via <a class="email" href="mailto:juliananthonyhofmann@gmail.com">juliananthonyhofmann@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Julian Hofmann – Alle Rechte vorbehalten</p>
+    <div class="footer-links">
+      <a href="impressum.html">Impressum</a>
+      <a href="agb.html">AGB</a>
+    </div>
+  </footer>
+</body>
+</html>
