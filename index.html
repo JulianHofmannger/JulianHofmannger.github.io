@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Julian Hofmann</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: white;
+      color: black;
+      line-height: 1.6;
+    }
+    header {
+      background-color: white;
+      border-bottom: 1px solid #ddd;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header img {
+      height: 144px;
+    }
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+      transition: opacity 0.3s;
+    }
+    nav a:hover {
+      opacity: 0.7;
+    }
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 90vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0 4rem;
+    }
+    .hero video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .hero-text {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 2rem;
+      max-width: 600px;
+      z-index: 2;
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    section p {
+      margin-bottom: 1rem;
+    }
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: white;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Julian Hofmann Logo" />
+    <nav>
+      <a href="#">Start</a>
+      <a href="#berufung">Meine Berufung</a>
+      <a href="#angebote">Angebote</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <video autoplay muted loop>
+      <source src="background.mp4" type="video/mp4" />
+      Ihr Browser unterstützt dieses Video-Format nicht.
+    </video>
+    <div class="hero-text">
+      <h1>Strategie. Fokus. Wirkung.</h1>
+      <p>Willkommen bei Julian Hofmann – wo Vision, Kapital und Präzision aufeinandertreffen.</p>
+    </div>
+  </section>
+
+  <main>
+    <section id="berufung">
+      <h2>Meine Berufung</h2>
+      <p>Ich schaffe Zugänge, die andere nicht haben. Meine Berufung ist es, Kapital dort zu platzieren, wo es nicht nur Rendite bringt, sondern Bedeutung entfaltet. Mit analytischer Klarheit, absoluter Diskretion und unternehmerischem Instinkt vermittele ich exklusive Vermögenswerte an Menschen mit Weitblick.</p>
+
+      <h2>Zugang, den andere nicht haben</h2>
+      <p>Julian Hofmann bietet Kapitalgebern Zugang zu sorgfältig geprüften Off-Market-Vermögenswerten – diskret, selektiv und wirkungsorientiert.</p>
+      <p>Wir arbeiten jenseits öffentlicher Märkte, wo Vertrauen, Geschwindigkeit und exzellente Prüfung den Unterschied machen. Unsere Mandate reichen von unterbewerteten Beteiligungen über exklusive Immobilien bis hin zu Sonderprojekten mit außergewöhnlichem Upside-Potenzial.</p>
+    </section>
+
+    <section id="angebote">
+      <h2>Angebote</h2>
+      <p>Unsere exklusiven Off-Market-Angebote sind nur für qualifizierte Investoren einsehbar. Bitte kontaktieren Sie uns für weitere Informationen.</p>
+      <p><strong>Hinweis:</strong> Diese Inhalte unterliegen strenger Vertraulichkeit.</p>
+    </section>
+
+    <section id="kontakt">
+      <h2>Kontakt</h2>
+      <p>Fragen oder Anfragen? Schreiben Sie uns: <a href="mailto:juliananthonyhofmann@gmail.com">juliananthonyhofmann@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Julian Hofmann. Alle Rechte vorbehalten.</p>
+    <p>Impressum | AGB</p>
+    <p>Email: <a href="mailto:juliananthonyhofmann@gmail.com">juliananthonyhofmann@gmail.com</a></p>
+  </footer>
+</body>
+</html>
