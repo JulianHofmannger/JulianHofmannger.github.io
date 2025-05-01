@@ -1,141 +1,159 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Julian Hofmann</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Julian Hofmann – Off-Market Deal Access</title>
   <style>
-    * {
-      box-sizing: border-box;
+    body {
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #f8f9fa;
+      color: #222;
     }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: white;
-      color: black;
-      line-height: 1.6;
+    header, footer {
+      background-color: #fff;
+      padding: 20px 40px;
+      border-bottom: 1px solid #ddd;
     }
-    header {
-      background-color: white;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #eaeaea;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    header img {
-      height: 96px;
+    nav {
+      float: right;
     }
     nav a {
-      margin-left: 2rem;
+      margin-left: 20px;
       text-decoration: none;
-      color: black;
-      font-weight: 500;
-      transition: opacity 0.3s;
-    }
-    nav a:hover {
-      opacity: 0.7;
+      color: #000;
     }
     .hero {
-      background: #000;
-      padding: 6rem 2rem;
-      text-align: left;
-      color: white;
+      text-align: center;
+      padding: 80px 20px;
+      background-color: #f1f3f5;
     }
-    .highlight-box {
-      margin: 2rem auto;
-      padding: 2rem;
-      max-width: 700px;
-      border-left: 4px solid white;
-      background: rgba(255, 255, 255, 0.03);
-      transition: all 0.3s ease;
-      cursor: default;
+    .hero h1 {
+      font-size: 32px;
     }
-    .highlight-box:hover {
-      background: rgba(255, 255, 255, 0.08);
-      transform: translateX(10px);
-    }
-    .highlight-box h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-    .highlight-box p {
-      color: #ccc;
-    }
-    section {
-      padding: 4rem 2rem;
+    .section {
+      padding: 40px;
       max-width: 900px;
-      margin: 0 auto;
+      margin: auto;
     }
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
+    .section h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      font-weight: 500;
+      border-bottom: 2px solid #e0e0e0;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    .cta-button {
+      background-color: #000;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 4px;
+      display: inline-block;
+      margin-top: 20px;
     }
     footer {
-      background-color: #111;
-      color: white;
+      font-size: 14px;
       text-align: center;
-      padding: 2rem;
-      font-size: 0.9rem;
+      padding: 30px 20px;
     }
-    footer a {
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .contact-form button {
+      background-color: #000;
       color: white;
-      text-decoration: underline;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+    }
+    #services ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    #services li {
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 12px;
+      position: relative;
+      padding-left: 24px;
+    }
+    #services li::before {
+      content: "\276F";
+      position: absolute;
+      left: 0;
+      color: #5a5a5a;
+      font-size: 14px;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Julian Hofmann Logo" />
+    <strong>Julian Hofmann</strong>
     <nav>
-      <a href="#">Start</a>
-      <a href="#berufung">Meine Berufung</a>
-      <a href="#angebote">Angebote</a>
-      <a href="#kontakt">Kontakt</a>
+      <a href="#about">Über uns</a>
+      <a href="#services">Leistungen</a>
+      <a href="#offers">Angebote</a>
+      <a href="#contact">Kontakt</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="highlight-box">
-      <h1>Kapital trifft Klarheit</h1>
-      <p>Julian Hofmann verbindet Vermögen mit Möglichkeiten – leise, gezielt und kompromisslos effektiv.</p>
-    </div>
-    <div class="highlight-box">
-      <h1>Wo andere verkaufen, selektieren wir</h1>
-      <p>Weniger Worte. Mehr Wirkung. Zugang zu exklusiven Off-Market-Werten beginnt hier.</p>
-    </div>
-  </section>
+  <div class="hero">
+    <h1>Zugang zu Off-Market-Vermögenswerten</h1>
+    <p>Julian Hofmann bietet Kapitalgebern Zugang zu sorgfältig geprüften Off-Market-Vermögenswerten – diskret, selektiv und wirkungsorientiert.<br>
+    Wir arbeiten jenseits öffentlicher Märkte, wo Vertrauen, Geschwindigkeit und exzellente Prüfung den Unterschied machen.</p>
+    <a class="cta-button" href="#contact">→ Zugang anfragen</a>
+  </div>
 
-  <main>
-    <section id="berufung">
-      <h2>Meine Berufung</h2>
-      <p>Ich schaffe Zugänge, die andere nicht haben. Meine Berufung ist es, Kapital dort zu platzieren, wo es nicht nur Rendite bringt, sondern Bedeutung entfaltet. Mit analytischer Klarheit, absoluter Diskretion und unternehmerischem Instinkt vermittele ich exklusive Vermögenswerte an Menschen mit Weitblick.</p>
+  <div class="section" id="about">
+    <h2>Wer wir sind</h2>
+    <p>Julian Hofmann steht für präzise Vermittlung strategischer Vermögenswerte – von unterbewerteten Beteiligungen über exklusive Immobilien bis hin zu Sonderprojekten mit außergewöhnlichem Upside-Potenzial.</p>
+    <p>Unser Netzwerk ist selektiv. Unsere Mandate vertraulich. Unsere Resultate eindeutig.</p>
+  </div>
 
-      <h2>Zugang, den andere nicht haben</h2>
-      <p>Julian Hofmann bietet Kapitalgebern Zugang zu sorgfältig geprüften Off-Market-Vermögenswerten – diskret, selektiv und wirkungsorientiert.</p>
-      <p>Wir arbeiten jenseits öffentlicher Märkte, wo Vertrauen, Geschwindigkeit und exzellente Prüfung den Unterschied machen. Unsere Mandate reichen von unterbewerteten Beteiligungen über exklusive Immobilien bis hin zu Sonderprojekten mit außergewöhnlichem Upside-Potenzial.</p>
-    </section>
+  <div class="section" id="services">
+    <h2>Unsere Leistungen</h2>
+    <ul>
+      <li>Strukturierte Vermittlung diskreter Off-Market-Angebote</li>
+      <li>Vorqualifikation und Selektion potenzieller Käufer & Verkäufer</li>
+      <li>Strategische Positionierung von Beteiligungen und Assets</li>
+      <li>Vorbereitung für Due Diligence & Kommunikationssteuerung</li>
+      <li>Verhandlungsbegleitung & Abschlussmanagement</li>
+    </ul>
+  </div>
 
-    <section id="angebote">
-      <h2>Angebote</h2>
-      <p>Unsere exklusiven Off-Market-Angebote sind nur für qualifizierte Investoren einsehbar. Bitte kontaktieren Sie uns für weitere Informationen.</p>
-      <p><strong>Hinweis:</strong> Diese Inhalte unterliegen strenger Vertraulichkeit.</p>
-    </section>
+  <div class="section" id="offers">
+    <h2>Exklusive Angebote</h2>
+    <p>Unsere exklusiven Off-Market-Angebote sind nur für qualifizierte Investoren einsehbar. Bitte kontaktieren Sie uns für eine persönliche Prüfung Ihrer Zugangsberechtigung.</p>
+    <blockquote>Diese Inhalte unterliegen strenger Vertraulichkeit.</blockquote>
+    <a class="cta-button" href="#contact">→ Zugang anfragen</a>
+  </div>
 
-    <section id="kontakt">
-      <h2>Kontakt</h2>
-      <p>Fragen oder Anfragen? Schreiben Sie uns: <a href="mailto:juliananthonyhofmann@gmail.com">juliananthonyhofmann@gmail.com</a></p>
-    </section>
-  </main>
+  <div class="section" id="contact">
+    <h2>Kontakt aufnehmen</h2>
+    <p><strong>Julian Anthony Hofmann</strong><br>
+    Zum Sportplatz 1<br>
+    01705 Freital, Deutschland<br>
+    📧 juliananthonyhofmann@gmail.com</p>
+    <form class="contact-form">
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="E-Mail" required>
+      <textarea placeholder="Anliegen"></textarea>
+      <button type="submit">Anfrage senden</button>
+    </form>
+  </div>
 
   <footer>
-    <p>&copy; 2025 Julian Hofmann. Alle Rechte vorbehalten.</p>
-    <p>Impressum | AGB</p>
-    <p>Email: <a href="mailto:juliananthonyhofmann@gmail.com">juliananthonyhofmann@gmail.com</a></p>
+    <p>© 2023 Julian Hofmann. Alle Rechte vorbehalten.</p>
+    <p><a href="#">Impressum</a> | <a href="#">Datenschutz</a></p>
   </footer>
 </body>
 </html>
