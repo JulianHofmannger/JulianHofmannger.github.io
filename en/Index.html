@@ -5,11 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Julian Hofmann – Off-Market Deal Access</title>
-  <script>
-    if (navigator.language.startsWith("de")) {
-      window.location.href = "/";
-    }
-  </script>
+  
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -117,6 +113,13 @@
     </nav>
   </header>
 
+<script>
+  const userLang = navigator.language || navigator.userLanguage;
+  if (userLang.startsWith("en") && !window.location.pathname.startsWith("/en")) {
+    window.location.href = "/en";
+  }
+</script>
+  
   <div class="hero">
     <h1><strong>Exclusive Access to Silent Million-Dollar Markets – Performance-Based, Legally Secure & Efficient</strong></h1>
     <p>
