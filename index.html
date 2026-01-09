@@ -144,22 +144,63 @@ Eigentümer unterstütze ich in ausgewählten Fällen dabei, den Übergang struk
 
   <div class="section" id="about">
 <style>
-#about-wrapper {
-  display: flex;
-  align-items: flex-start;
-  gap: 40px;
-}
-#about-text {
-  flex: 1;
-}
-#about-book {
-  width: 280px; 
-}
-#about-book img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+  #about-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  #about-text {
+    flex: 2;
+    min-width: 260px;
+  }
+
+  #about-book {
+    flex: 1;
+    max-width: 260px;
+    text-align: center;
+  }
+
+  #about-book img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  }
+
+  #about-book .book-caption {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #555;
+  }
+
+  #about-book .book-link {
+    display: inline-block;
+    margin-top: 4px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    border-bottom: 1px solid #555;
+    padding-bottom: 1px;
+  }
+
+  #about-book .book-link:hover {
+    border-bottom-color: #000;
+  }
+
+  @media (max-width: 768px) {
+    #about-wrapper {
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    #about-book {
+      max-width: 200px;
+      margin: 0 auto;
+    }
+  }
 </style>
 
 <div id="about-wrapper">
@@ -175,6 +216,20 @@ Eigentümer unterstütze ich in ausgewählten Fällen dabei, den Übergang struk
       </p>
     </div>
   </div>
+
+  <div id="about-book">
+    <a href="DEIN-LINK-ZUM-BUCH" target="_blank" rel="noopener">
+      <img src="DEIN-BUCHCOVER.jpg" alt="Gebundenes Kapital – Buchcover">
+    </a>
+    <div class="book-caption">
+      Fachbuch: <strong>Gebundenes Kapital</strong><br>
+      <a class="book-link" href="DEIN-LINK-ZUM-BUCH" target="_blank" rel="noopener">
+        Zum Buch
+      </a>
+    </div>
+  </div>
+
+</div>
 
   <div id="about-book">
     <img src="DEIN-BUCHCOVER.jpg" alt="Gebundenes Kapital – Buchcover">
