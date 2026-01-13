@@ -29,8 +29,9 @@
 /* --- MITTLERES PORTRAIT --- */
 
 .portrait-block {
-  flex: 0 0 320px;      /* feste Breite Portrait */
+  flex: 0 0 300px;
   text-align: center;
+  margin-top: 40px;
 }
 
 .portrait-block img {
