@@ -1,18 +1,22 @@
-/* --- Grundlayout für die drei Spalten --- */
-.about-wrapper {
-  display: flex;
-  gap: 60px;                 /* mehr Abstand zwischen Spalten */
-  max-width: 1400px;
+/* About-Bereich für "Über mich" + "Veröffentlichung" */
+
+#about {
+  max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
-  align-items: flex-start;   /* alle Spalten oben ausrichten */
+}
+
+.about-wrapper {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
 }
 
 /* Textspalten links und rechts */
 .about-block,
 .publication-block {
   flex: 1 1 0;
-  min-width: 280px;
+  min-width: 260px;
 }
 
 .about-block p,
@@ -20,38 +24,36 @@
   line-height: 1.4;
 }
 
-/* Portrait-Spalte in der Mitte: feste Breite, kein Überlappen */
+/* Portrait mittig */
 .portrait-block {
-  flex: 0 0 320px;            /* feste Spaltenbreite für Portrait */
+  flex: 0 0 320px;
   text-align: center;
-  min-width: 320px;
-  margin-top: 40px;           /* nach unten schieben, damit auf Augenhöhe mit Cover */
 }
 
-/* Gemeinsame Basis für beide Bilder */
+/* Gleiche Breite für Portrait & Cover */
 .portrait-block img,
 .publication-cover .book-cover {
   display: block;
-  margin: 0 auto 10px auto;
   width: 100%;
   max-width: 320px;
-  max-height: 360px;
+  height: auto;
+  margin: 0 auto 10px auto;
 }
 
-/* Portrait: voll ausfüllen, leicht zugeschnitten */
+/* Portrait darf leicht zuschneiden */
 .portrait-block img {
   object-fit: cover;
 }
 
-/* Buchcover: exakt wie PNG, mit weißem Rand */
+/* Cover exakt wie PNG (mit weißem Rand) */
 .publication-cover .book-cover {
   object-fit: contain;
 }
 
-/* --- Veröffentlichung: Text + Cover nebeneinander --- */
+/* Veröffentlichung: Text + Cover nebeneinander */
 .publication-inner {
   display: flex;
-  gap: 40px;
+  gap: 24px;
   align-items: flex-start;
 }
 
@@ -64,7 +66,7 @@
   text-align: center;
 }
 
-/* --- Responsive Verhalten --- */
+/* Responsive */
 @media (max-width: 1000px) {
   .about-wrapper {
     flex-direction: column;
@@ -73,22 +75,14 @@
   }
 
   .about-block,
-  .publication-block {
+  .publication-block,
+  .portrait-block {
     width: 100%;
+    flex: 1 1 100%;
   }
 
   .publication-inner {
     flex-direction: column;
     align-items: center;
-    text-align: center;
-  }
-
-  .publication-text,
-  .publication-cover {
-    width: 100%;
-  }
-
-  .portrait-block {
-    margin-top: 20px;  /* auf kleineren Screens etwas weniger Abstand */
   }
 }
