@@ -1,24 +1,18 @@
 /* --- Grundlayout für die drei Spalten --- */
 .about-wrapper {
   display: flex;
-  gap: 40px;
+  gap: 60px;                 /* mehr Abstand zwischen Spalten */
   max-width: 1400px;
   margin: 0 auto;
   padding: 40px 20px;
+  align-items: flex-start;   /* alle Spalten oben ausrichten */
 }
 
 /* Textspalten links und rechts */
 .about-block,
 .publication-block {
-  flex: 1.2;
+  flex: 1 1 0;
   min-width: 280px;
-}
-
-/* Portrait-Spalte in der Mitte */
-.portrait-block {
-  flex: 0.8;
-  text-align: center;
-  min-width: 220px;
 }
 
 .about-block p,
@@ -26,14 +20,32 @@
   line-height: 1.4;
 }
 
-/* --- GLEICHE BILDGRÖSSE (Portrait & Buchcover) --- */
+/* Portrait-Spalte in der Mitte: feste Breite, kein Überlappen */
+.portrait-block {
+  flex: 0 0 320px;            /* feste Spaltenbreite für Portrait */
+  text-align: center;
+  min-width: 320px;
+  margin-top: 40px;           /* nach unten schieben, damit auf Augenhöhe mit Cover */
+}
+
+/* Gemeinsame Basis für beide Bilder */
 .portrait-block img,
 .publication-cover .book-cover {
-  width: 320px !important;
-  height: 360px !important;
-  object-fit: cover !important;
   display: block;
   margin: 0 auto 10px auto;
+  width: 100%;
+  max-width: 320px;
+  max-height: 360px;
+}
+
+/* Portrait: voll ausfüllen, leicht zugeschnitten */
+.portrait-block img {
+  object-fit: cover;
+}
+
+/* Buchcover: exakt wie PNG, mit weißem Rand */
+.publication-cover .book-cover {
+  object-fit: contain;
 }
 
 /* --- Veröffentlichung: Text + Cover nebeneinander --- */
@@ -74,5 +86,9 @@
   .publication-text,
   .publication-cover {
     width: 100%;
+  }
+
+  .portrait-block {
+    margin-top: 20px;  /* auf kleineren Screens etwas weniger Abstand */
   }
 }
