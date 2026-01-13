@@ -29,13 +29,14 @@
 /* --- MITTLERES PORTRAIT --- */
 
 .portrait-block {
-  flex: 0 0 300px;
+  flex: 0 0 320px;      /* gleiche Spaltenbreite wie Cover */
   text-align: center;
-  margin-top: 40px;
+  margin-top: 40px;     /* Portrait nach unten verschoben */
 }
 
 .portrait-block img {
   width: 100%;
+  max-width: 320px;
   height: 480px;        /* einheitliche Höhe */
   object-fit: cover;    /* Portrait füllt sauber */
   display: block;
@@ -64,19 +65,22 @@
   line-height: 1.5;
 }
 
-/* --- COVER SPALTE --- */
+
+/* --- COVER-SPALTE --- */
 
 .publication-cover {
-  flex: 0 0 320px;       /* gleiche Breite wie Portrait */
+  flex: 0 0 320px;      /* gleiche Spaltenbreite wie Portrait */
   text-align: center;
 }
 
-/* --- COVER BILD (separat entkoppelt!) --- */
+
+/* --- COVER-BILD --- */
 
 .publication-cover .book-cover {
   width: 100%;
-  height: 480px;         /* gleiche Höhe wie Portrait */
-  object-fit: contain;   /* zeigt komplette PNG */
+  max-width: 320px;
+  height: 480px;        /* gleiche Höhe wie Portrait */
+  object-fit: contain;  /* komplettes PNG im Rahmen */
   display: block;
   margin: 0 auto;
 }
@@ -90,6 +94,11 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+
+  .about-block,
+  .publication-block {
+    width: 100%;
   }
 
   .portrait-block,
