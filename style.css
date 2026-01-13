@@ -24,20 +24,20 @@
   line-height: 1.4;
 }
 
-/* Portrait mittig */
+/* Portrait mittig – exakt 320px wie Cover */
 .portrait-block {
-  flex: 0 0 300px;
+  flex: 0 0 320px;
   text-align: center;
 }
 
-/* Gemeinsame Basis */
+/* Portrait + Buchcover exakt gleiche Breite */
 .portrait-block img,
 .publication-cover .book-cover {
   display: block;
   width: 100%;
+  max-width: 320px;     /* exakt gleiche Breite */
   height: auto;
   margin: 0 auto 10px auto;
-  max-width: 320px; /* Portrait bleibt 320px */
 }
 
 /* Portrait darf leicht zuschneiden */
@@ -45,10 +45,9 @@
   object-fit: cover;
 }
 
-/* Cover exakt wie PNG (mit weißem Rand) – hier kleinere Breite */
+/* Buchcover exakt wie PNG (weißes Layout intakt) */
 .publication-cover .book-cover {
   object-fit: contain;
-  max-width: 260px; /* <-- EINZIGE ÄNDERUNG: Buchcover kleiner */
 }
 
 /* Veröffentlichung: Text + Cover nebeneinander */
@@ -62,12 +61,13 @@
   flex: 2;
 }
 
+/* Buchcover-Container EXAKT gleiche Breite wie Portrait */
 .publication-cover {
-  flex: 0 0 360px;
+  flex: 0 0 320px;      /* wichtigste Änderung */
   text-align: center;
 }
 
-/* Responsive */
+/* Responsive Verhalten */
 @media (max-width: 1000px) {
   .about-wrapper {
     flex-direction: column;
