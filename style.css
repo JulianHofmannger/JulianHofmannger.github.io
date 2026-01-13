@@ -30,14 +30,14 @@
   text-align: center;
 }
 
-/* Gleiche Breite für Portrait & Cover */
+/* Gemeinsame Basis */
 .portrait-block img,
 .publication-cover .book-cover {
   display: block;
   width: 100%;
-  max-width: 320px;
   height: auto;
   margin: 0 auto 10px auto;
+  max-width: 320px; /* Portrait bleibt 320px */
 }
 
 /* Portrait darf leicht zuschneiden */
@@ -45,9 +45,10 @@
   object-fit: cover;
 }
 
-/* Cover exakt wie PNG (mit weißem Rand) */
+/* Cover exakt wie PNG (mit weißem Rand) – hier kleinere Breite */
 .publication-cover .book-cover {
   object-fit: contain;
+  max-width: 260px; /* <-- EINZIGE ÄNDERUNG: Buchcover kleiner */
 }
 
 /* Veröffentlichung: Text + Cover nebeneinander */
