@@ -10,13 +10,13 @@
 /* Textspalten links und rechts */
 .about-block,
 .publication-block {
-  flex: 1.2; /* mehr Platz für Text */
+  flex: 1.2;
   min-width: 280px;
 }
 
 /* Portrait-Spalte in der Mitte */
 .portrait-block {
-  flex: 0.8; /* etwas schmaler */
+  flex: 0.8;
   text-align: center;
   min-width: 220px;
 }
@@ -26,19 +26,17 @@
   line-height: 1.4;
 }
 
-/* Bildgrößen: Portrait & Buchcover GLEICH */
+/* --- GLEICHE BILDGRÖSSE (Portrait & Buchcover) --- */
 .portrait-block img,
 .publication-cover .book-cover {
-  width: 100%;
-  max-width: 320px;
-  max-height: 360px;
+  width: 320px !important;
+  height: 360px !important;
+  object-fit: cover !important;
   display: block;
   margin: 0 auto 10px auto;
-  object-fit: cover; /* beide füllen denselben Rahmen */
 }
 
 /* --- Veröffentlichung: Text + Cover nebeneinander --- */
-
 .publication-inner {
   display: flex;
   gap: 40px;
@@ -46,16 +44,15 @@
 }
 
 .publication-text {
-  flex: 2; /* viel Platz für den Text */
+  flex: 2;
 }
 
 .publication-cover {
-  flex: 1; /* fester Platz für Cover */
+  flex: 1;
   text-align: center;
 }
 
 /* --- Responsive Verhalten --- */
-
 @media (max-width: 1000px) {
   .about-wrapper {
     flex-direction: column;
@@ -78,11 +75,4 @@
   .publication-cover {
     width: 100%;
   }
-}
-
-.portrait-block img,
-.publication-cover .book-cover {
-  width: 320px !important;
-  height: 360px !important;
-  object-fit: cover !important;
 }
