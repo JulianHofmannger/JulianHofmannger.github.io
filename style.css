@@ -43,6 +43,30 @@
   object-fit: contain;
 }
 
+/* --- NEU: Text + Cover in der Veröffentlichung nebeneinander --- */
+
+.publication-inner {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.publication-text {
+  flex: 2;
+}
+
+.publication-cover {
+  flex: 1;
+  text-align: center;
+}
+
+/* genauer für das Cover-Bild in der rechten Spalte */
+.publication-cover .book-cover {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+}
+
 /* responsive */
 @media (max-width: 1000px) {
   .about-wrapper {
@@ -53,6 +77,16 @@
 
   .about-block,
   .publication-block {
+    width: 100%;
+  }
+
+  .publication-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: left; /* oder center, wenn du willst */
+  }
+
+  .publication-text {
     width: 100%;
   }
 }
