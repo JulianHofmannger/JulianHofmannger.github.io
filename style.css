@@ -35,7 +35,7 @@
 .publication-cover .book-cover {
   display: block;
   width: 100%;
-  max-width: 300px;     /* exakt gleiche Breite */
+  max-width: 280px;     /* exakt gleiche Breite */
   height: auto;
   margin: 0 auto 10px auto;
 }
