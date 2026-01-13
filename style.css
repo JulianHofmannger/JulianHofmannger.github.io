@@ -79,3 +79,10 @@
     width: 100%;
   }
 }
+
+.portrait-block img,
+.publication-cover .book-cover {
+  width: 320px !important;
+  height: 360px !important;
+  object-fit: cover !important;
+}
