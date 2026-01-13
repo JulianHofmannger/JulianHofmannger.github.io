@@ -67,7 +67,7 @@
 /* Cover innerhalb der rechten Spalte */
 .publication-cover .book-cover {
   width: 100%;
-  max-width: 280px;
+  max-width: 320px;
   height: auto;
   margin-bottom: 10px;
 }
