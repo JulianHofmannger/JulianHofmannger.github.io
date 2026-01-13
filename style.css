@@ -1,0 +1,58 @@
+.about-wrapper {
+  display: flex;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.about-block,
+.publication-block {
+  flex: 1.2; /* breiter als Portrait */
+  min-width: 280px;
+}
+
+.portrait-block {
+  flex: 0.8; /* kleiner, damit Text mehr Raum erhält */
+  text-align: center;
+  min-width: 220px;
+}
+
+.about-block p,
+.publication-block p {
+  line-height: 1.4;
+}
+
+.portrait-block img,
+.publication-block .book-cover {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+/* für gleich hohe Bilder – gleiche max-height setzen */
+.portrait-block img {
+  max-height: 360px;
+  object-fit: cover;
+}
+
+.publication-block .book-cover {
+  max-height: 360px;
+  object-fit: contain;
+}
+
+/* responsive */
+@media (max-width: 1000px) {
+  .about-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-block,
+  .publication-block {
+    width: 100%;
+  }
+}
