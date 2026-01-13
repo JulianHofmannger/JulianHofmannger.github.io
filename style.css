@@ -1,3 +1,4 @@
+/* --- Grundlayout für die drei Spalten --- */
 .about-wrapper {
   display: flex;
   gap: 40px;
@@ -6,14 +7,16 @@
   padding: 40px 20px;
 }
 
+/* Textspalten links und rechts */
 .about-block,
 .publication-block {
-  flex: 1.2; /* breiter als Portrait */
+  flex: 1.2; /* mehr Platz für Text */
   min-width: 280px;
 }
 
+/* Portrait-Spalte in der Mitte */
 .portrait-block {
-  flex: 0.8; /* kleiner, damit Text mehr Raum erhält */
+  flex: 0.8; /* etwas schmaler */
   text-align: center;
   min-width: 220px;
 }
@@ -23,6 +26,7 @@
   line-height: 1.4;
 }
 
+/* Bildgrößen */
 .portrait-block img,
 .publication-block .book-cover {
   width: 100%;
@@ -32,7 +36,7 @@
   margin: 0 auto 10px auto;
 }
 
-/* für gleich hohe Bilder – gleiche max-height setzen */
+/* gleiche optische Höhe für beide Bilder */
 .portrait-block img {
   max-height: 360px;
   object-fit: cover;
@@ -43,7 +47,7 @@
   object-fit: contain;
 }
 
-/* --- NEU: Text + Cover in der Veröffentlichung nebeneinander --- */
+/* --- Veröffentlichung: Text + Cover nebeneinander --- */
 
 .publication-inner {
   display: flex;
@@ -52,22 +56,24 @@
 }
 
 .publication-text {
-  flex: 2;
+  flex: 2; /* viel Platz für den Text */
 }
 
 .publication-cover {
-  flex: 1;
+  flex: 1; /* fester Platz für Cover */
   text-align: center;
 }
 
-/* genauer für das Cover-Bild in der rechten Spalte */
+/* Cover innerhalb der rechten Spalte */
 .publication-cover .book-cover {
   width: 100%;
   max-width: 280px;
   height: auto;
+  margin-bottom: 10px;
 }
 
-/* responsive */
+/* --- Responsive Verhalten --- */
+
 @media (max-width: 1000px) {
   .about-wrapper {
     flex-direction: column;
@@ -83,10 +89,11 @@
   .publication-inner {
     flex-direction: column;
     align-items: center;
-    text-align: left; /* oder center, wenn du willst */
+    text-align: center;
   }
 
-  .publication-text {
+  .publication-text,
+  .publication-cover {
     width: 100%;
   }
 }
