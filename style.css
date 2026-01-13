@@ -63,7 +63,7 @@
 
 /* Buchcover-Container EXAKT gleiche Breite wie Portrait */
 .publication-cover {
-  flex: 0 0 320px;      /* wichtigste Änderung */
+  flex: 0 0 300px;      /* wichtigste Änderung */
   text-align: center;
 }
 
