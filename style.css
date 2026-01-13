@@ -26,25 +26,15 @@
   line-height: 1.4;
 }
 
-/* Bildgrößen */
+/* Bildgrößen: Portrait & Buchcover GLEICH */
 .portrait-block img,
-.publication-block .book-cover {
+.publication-cover .book-cover {
   width: 100%;
   max-width: 320px;
-  height: auto;
+  max-height: 360px;
   display: block;
   margin: 0 auto 10px auto;
-}
-
-/* gleiche optische Höhe für beide Bilder */
-.portrait-block img {
-  max-height: 360px;
-  object-fit: cover;
-}
-
-.publication-block .book-cover {
-  max-height: 360px;
-  object-fit: contain;
+  object-fit: cover; /* beide füllen denselben Rahmen */
 }
 
 /* --- Veröffentlichung: Text + Cover nebeneinander --- */
@@ -62,14 +52,6 @@
 .publication-cover {
   flex: 1; /* fester Platz für Cover */
   text-align: center;
-}
-
-/* Cover innerhalb der rechten Spalte */
-.publication-cover .book-cover {
-  width: 100%;
-  max-width: 320px;
-  height: auto;
-  margin-bottom: 10px;
 }
 
 /* --- Responsive Verhalten --- */
