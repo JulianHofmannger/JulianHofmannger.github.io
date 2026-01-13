@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  
+
+  <!-- Stylesheet laden -->
+  <link rel="stylesheet" href="style.css">
+
   <script>
-  const userLang = navigator.language || navigator.userLanguage;
-  if (userLang.startsWith("en") && !window.location.pathname.startsWith("/en")) {
-    window.location.href = "/en/";
-  }
-</script>
-  
+    const userLang = navigator.language || navigator.userLanguage;
+    if (userLang.startsWith("en") && !window.location.pathname.startsWith("/en")) {
+      window.location.href = "/en/";
+    }
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Julian Hofmann – Käufervermittlung für Vermögenswerte im Mittelstand</title>
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -104,6 +108,7 @@
       font-size: 14px;
     }
   </style>
+
 </head>
 <body>
   <header>
